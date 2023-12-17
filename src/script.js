@@ -3,7 +3,7 @@ let nome = "Luiz"
 console.log("Seja bem vindo ao DIOlorant, " + nome)
 console.log("No início do jogo, você começará no Elo Ferro com 0 de XP.")
 console.log("Conforme for ganhando partidas, você ganha XP e consequentemente sobe de elo.")
-let xp = 1000
+let xp = 0
 let elo = "Ferro"
 
 switch(true){    
