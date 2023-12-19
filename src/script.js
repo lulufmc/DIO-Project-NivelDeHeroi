@@ -1,43 +1,39 @@
-console.log("Qual o nome do seu personagem?")
-let nome = "Luiz"
-console.log("Seja bem vindo ao DIOlorant, " + nome)
-console.log("No início do jogo, você começará no Elo Ferro com 0 de XP.")
-console.log("Conforme for ganhando partidas, você ganha XP e consequentemente sobe de elo.")
-let xp = 0
-let elo = "Ferro"
-
-switch(true){    
-    case xp >= 1000 && xp < 2000:
-        elo = "Bronze"
-        break       
-        
-    case xp >= 2000 && xp < 3000:
-       elo = "Prata"
-       break   
-
-    case xp >= 3000 && xp < 4000:
-       elo = "Ouro"
-       break
-       
-    case xp >= 4000 && xp < 5000:
-        elo = "Platina"
-        break
-        
-    case xp >= 5000 && xp < 6000:
-        elo = "Diamante"
-        break
-        
-    case xp >= 6000 && xp < 7000:
-        elo = "Ascendente"
-        break         
-
-    case xp >= 7000 && xp < 8000:
-        elo = "Imortal"
-        break
-        
-    case xp >= 8000:
-        elo = "Radiante"
-        break    
+function subtraction(wins, loss){
+    let result = wins - loss
+    return result
 }
 
-console.log("O herói de nome " + nome + " está no nível de " + elo)
+let winBalance = subtraction(10, 5)
+let level = ""
+
+switch(true){
+    case winBalance <= 10:
+    level = "Ferro"
+    break
+    
+    case winBalance >= 11 && winBalance <= 20:
+    level = "Bronze"
+    break
+    
+    case winBalance >= 21 && winBalance <= 50:
+    level = "Prata"
+    break
+
+    case winBalance >= 51 && winBalance <= 80:
+    level = "Ouro"
+    break
+
+    case winBalance >= 81 && winBalance <= 90:
+    level = "Diamante"
+    break
+
+    case winBalance >= 91 && winBalance <= 100:
+    level = "Lendário"
+    break
+
+    case winBalance >= 101:
+    level = "Imortal"
+}
+
+console.log(`O Herói tem saldo de ${winBalance} vitórias e está no nível de ${level}`)
+
